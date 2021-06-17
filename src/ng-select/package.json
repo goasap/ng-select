@@ -1,6 +1,6 @@
 {
-  "name": "@goasap/ng-select",
-  "version": "3.2.8",
+  "name": "ng-select",
+  "version": "3.2.9",
   "description": "Angular ng-select - All in One UI Select, Multiselect and Autocomplete",
   "author": "",
   "license": "MIT",

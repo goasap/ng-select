@@ -1,10 +1,16 @@
 {
-  "name": "@ng-select/ng-select",
-  "version": "3.2.0",
+  "name": "@goasap/ng-select",
+  "version": "3.2.12",
   "description": "Angular ng-select - All in One UI Select, Multiselect and Autocomplete",
-  "author": "@ng-select/ng-select",
+  "author": "",
   "license": "MIT",
-  "repository": "ng-select/ng-select",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goasap/ng-select"
+  },
   "engines": {
     "node": ">= 10.0.0",
     "npm": ">= 3.0.0"

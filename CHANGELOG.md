@@ -2,7 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## Since 3.2.0, notable changes are on [Releases Page](https://github.com/ng-select/ng-select/releases)
+### [3.2.12](https://github.com/goasap/ng-select/compare/v3.2.11...v3.2.12) (2021-06-17)
+
+### [3.2.11](https://github.com/goasap/ng-select/compare/v3.2.10...v3.2.11) (2021-06-17)
+
+### [3.2.10](https://github.com/goasap/ng-select/compare/v3.2.9...v3.2.10) (2021-06-17)
+
+### [3.2.8](https://github.com/goasap/ng-select/compare/v3.2.9...v3.2.8) (2021-06-17)
+
+### [3.2.9](https://github.com/goasap/ng-select/compare/v3.2.8...v3.2.9) (2021-06-17)
+
+### [3.2.8](https://github.com/goasap/ng-select/compare/v3.2.7...v3.2.8) (2021-06-17)
+
+### [3.2.7](https://github.com/goasap/ng-select/compare/v3.2.6...v3.2.7) (2021-06-17)
+
+### [3.2.6](https://github.com/goasap/ng-select/compare/v3.2.5...v3.2.6) (2021-06-17)
+
+### [3.2.5](https://github.com/goasap/ngx-chips/compare/v3.2.4...v3.2.5) (2021-06-17)
+
+### [3.2.4](https://github.com/goasap/ng-select/compare/v3.2.3...v3.2.4) (2021-06-17)
+
+### [3.2.3](https://github.com/goasap/ng-select/compare/v3.2.2...v3.2.3) (2021-06-17)
+
+### [3.2.2](https://github.com/goasap/ng-select/compare/v7.0.0...v3.2.2) (2021-06-17)
 
 ### [3.1.1](https://github.com/ng-select/ng-select/compare/v3.1.0...v3.1.1) (2019-10-19)
 

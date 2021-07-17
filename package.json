@@ -1,4 +1,3 @@
-{
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ng-select/ng-select.git"
@@ -20,8 +19,9 @@
     "coveralls": "cat ./coverage/ng-select/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "ng lint ng-select && ng lint ng-option-highlight",
     "postpublish": "cp dist/ng-select/package.json src/ng-select && cp dist/ng-option-highlight/package.json src/ng-option-highlight",
-    "release": "semantic-release"
+    "release": "npm run build && semantic-release"
   },
+  "repository":"https://github.com/goasap/ng-select",
   "release": {
     "branch": "master",
     "plugins": [

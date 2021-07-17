@@ -15,6 +15,6 @@ git push --follow-tags origin master
 echo push to npm
 cp README.md ./dist/ng-select/
 cd ./dist/ng-select/
-yarn publish --access=public
-cd ./dist/ng-option-highlight/
-yarn publish --access=public
+npm publish
+# cd ./dist/ng-option-highlight/
+# yarn publish --access=public

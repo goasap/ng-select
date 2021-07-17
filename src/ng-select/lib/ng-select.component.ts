@@ -110,6 +110,8 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
     @Input() searchWhileComposing = true;
     @Input() minTermLength = 0;
     @Input() editableSearchTerm = false;
+    @Input() maxTermLength: number = 0;
+    @Input() notCloseIfSearching: boolean = false;
     @Input() keyDownFn = (_: KeyboardEvent) => true;
 
     @Input() @HostBinding('class.ng-select-typeahead') typeahead: Subject<string>;
@@ -156,6 +158,8 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
     @Output('remove') removeEvent = new EventEmitter();
     @Output('scroll') scroll = new EventEmitter<{ start: number; end: number }>();
     @Output('scrollToEnd') scrollToEnd = new EventEmitter();
+    @Output('searchLengthError') searchLengthError = new EventEmitter();
+    @Output('clearText') clearTextEvent = new EventEmitter();
 
     // custom templates
     @ContentChild(NgOptionTemplateDirective, { read: TemplateRef }) optionTemplate: TemplateRef<any>;
@@ -428,7 +432,9 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
         this.isOpen = false;
         this._isComposing = false;
         if (!this._editableSearchTerm) {
-            this._clearSearch();
+            
+            if(!this.notCloseIfSearching && this.searchTerm) this._clearSearch();
+
         } else {
             this.itemsList.resetFilteredItems();
         }
@@ -576,6 +582,13 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
         }
 
         this.searchEvent.emit({ term, items: this.itemsList.filteredItems.map(x => x.value) });
+
+        if( (this.minTermLength > 0  && term.length < this.minTermLength) || (this.maxTermLength > 0  && term.length > this.maxTermLength) ){
+            this.searchLengthError.emit({"error": `Min ${this.minTermLength} Max ${this.maxTermLength} characters allowed`});
+            return;
+        }
+
+        this.searchLengthError.emit( false );
         this.open();
     }
 
@@ -616,6 +629,10 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
         if (!(<any>this._cd).destroyed) {
             this._cd.detectChanges();
         }
+    }
+
+    clearFromX(){
+        this._clearSearch();
     }
 
     private _setSearchTermFromItems() {
@@ -806,8 +823,10 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
             return;
         }
 
+        this.clearTextEvent.emit();
         this._changeSearch(null);
         this.itemsList.resetFilteredItems();
+
     }
 
     private _changeSearch(searchTerm: string) {

@@ -583,7 +583,7 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
 
         this.searchEvent.emit({ term, items: this.itemsList.filteredItems.map(x => x.value) });
         // tslint:disable-next-line:max-line-length
-        if( (this.minTermLength > 0 && term.length < this.minTermLength) || (this.maxTermLength > 0 && term.length > this.maxTermLength)){
+        if((this.minTermLength > 0 && term.length < this.minTermLength) || (this.maxTermLength > 0 && term.length > this.maxTermLength)) {
             this.searchLengthError.emit({'error': `Min ${this.minTermLength} Max ${this.maxTermLength} characters allowed`});
             return;
         }
@@ -631,7 +631,7 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
         }
     }
 
-    clearFromX(){
+    clearFromX() {
         this._clearSearch();
     }
 

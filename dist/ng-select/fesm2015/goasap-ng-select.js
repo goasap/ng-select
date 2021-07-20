@@ -2877,4 +2877,4 @@ NgSelectModule.decorators = [
  */
 
 export { NgSelectComponent, NgSelectConfig, NgSelectModule, SELECTION_MODEL_FACTORY, DefaultSelectionModelFactory as ɵb, DefaultSelectionModel as ɵc, NgDropdownPanelService as ɵd, NgItemLabelDirective as ɵe, NgOptionTemplateDirective as ɵf, NgOptgroupTemplateDirective as ɵg, NgLabelTemplateDirective as ɵh, NgMultiLabelTemplateDirective as ɵi, NgHeaderTemplateDirective as ɵj, NgFooterTemplateDirective as ɵk, NgNotFoundTemplateDirective as ɵl, NgTypeToSearchTemplateDirective as ɵm, NgLoadingTextTemplateDirective as ɵn, NgTagTemplateDirective as ɵo, NgLoadingSpinnerTemplateDirective as ɵp, NgDropdownPanelComponent as ɵq, NgOptionComponent as ɵr, ConsoleService as ɵs };
-//# sourceMappingURL=ng-select-ng-select.js.map
+//# sourceMappingURL=goasap-ng-select.js.map

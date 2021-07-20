@@ -22,7 +22,6 @@
     "postpublish": "cp dist/ng-select/package.json src/ng-select && cp dist/ng-option-highlight/package.json src/ng-option-highlight",
     "release": "npm run build && semantic-release"
   },
-  "repository":"https://github.com/goasap/ng-select",
   "release": {
     "branch": "master",
     "plugins": [

@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('rxjs/operators'), require('rxjs'), require('@angular/common')) :
-    typeof define === 'function' && define.amd ? define('@ng-select/ng-select', ['exports', '@angular/core', '@angular/forms', 'rxjs/operators', 'rxjs', '@angular/common'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global['ng-select'] = global['ng-select'] || {}, global['ng-select']['ng-select'] = {}), global.ng.core, global.ng.forms, global.rxjs.operators, global.rxjs, global.ng.common));
+    typeof define === 'function' && define.amd ? define('@goasap/ng-select', ['exports', '@angular/core', '@angular/forms', 'rxjs/operators', 'rxjs', '@angular/common'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.goasap = global.goasap || {}, global.goasap['ng-select'] = {}), global.ng.core, global.ng.forms, global.rxjs.operators, global.rxjs, global.ng.common));
 }(this, (function (exports, i0, forms, operators, rxjs, common) { 'use strict';
 
     function _interopNamespace(e) {
@@ -3503,4 +3503,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=ng-select-ng-select.umd.js.map
+//# sourceMappingURL=goasap-ng-select.umd.js.map

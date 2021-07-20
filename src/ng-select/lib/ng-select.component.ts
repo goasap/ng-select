@@ -432,9 +432,9 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
         this.isOpen = false;
         this._isComposing = false;
         if (!this._editableSearchTerm) {
-            
-            if(!this.notCloseIfSearching && this.searchTerm) this._clearSearch();
-
+            if(!this.notCloseIfSearching && this.searchTerm) {
+                this._clearSearch();
+            }
         } else {
             this.itemsList.resetFilteredItems();
         }
@@ -582,9 +582,9 @@ export class NgSelectComponent implements OnDestroy, OnChanges, AfterViewInit, C
         }
 
         this.searchEvent.emit({ term, items: this.itemsList.filteredItems.map(x => x.value) });
-
-        if( (this.minTermLength > 0  && term.length < this.minTermLength) || (this.maxTermLength > 0  && term.length > this.maxTermLength) ){
-            this.searchLengthError.emit({"error": `Min ${this.minTermLength} Max ${this.maxTermLength} characters allowed`});
+        // tslint:disable-next-line:max-line-length
+        if( (this.minTermLength > 0 && term.length < this.minTermLength) || (this.maxTermLength > 0 && term.length > this.maxTermLength)){
+            this.searchLengthError.emit({'error': `Min ${this.minTermLength} Max ${this.maxTermLength} characters allowed`});
             return;
         }
 
